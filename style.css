@@ -1,0 +1,1193 @@
+:root {
+  --pri: #f8f4e1;
+  --sec: #222831;
+  --tri1: #948979;
+  --tri2: #393e46;
+  --red: #ff0000dd;
+  --green: rgba(6, 179, 6, 0.936);
+  --black: black;
+}
+
+@font-face {
+  font-family: light;
+  src: url(./AeonikTRIAL-Light.otf);
+}
+
+@font-face {
+  font-family: normal;
+  src: url(./AeonikTRIAL-Regular.otf);
+}
+
+@font-face {
+  font-family: bold;
+  src: url(./AeonikTRIAL-Bold.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--pri);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: aeonik;
+}
+
+#main {
+  height: 110%;
+  width: 100%;
+  background-color: var(--sec);
+  padding-top: 70px;
+  user-select: none;
+}
+
+nav {
+  height: 60px;
+  width: 100%;
+  padding: 15px 40px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  background-color: var(--sec);
+}
+
+.nav-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--tri2);
+  border-radius: 20px;
+  padding: 8px 20px;
+}
+
+.nav-in h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.theme {
+  background-color: var(--pri);
+  padding: 10px 12px;
+  border-radius: 20px;
+  transition: all ease 0.2s;
+}
+
+.theme:active {
+  scale: 0.95;
+}
+
+.theme h4 {
+  font-size: 15px;
+  color: var(--sec);
+  font-weight: 700;
+  font-family: normal;
+  cursor: pointer;
+}
+
+section.allElems {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  overflow: auto;
+  position: absolute;
+}
+
+section.allElems::-webkit-scrollbar {
+  display: none;
+}
+
+.allElems header {
+  height: 300px;
+  width: 100%;
+  background-image: url(./images/header.avif);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  margin-top: -15px;
+}
+
+header .header1 h1 {
+  font-size: 60px;
+  font-weight: bolder;
+  font-family: bold;
+}
+header .header1 h2 {
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: bold;
+}
+header .header1 h4 {
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: bold;
+  margin-top: 10px;
+}
+header .header2 h2 {
+  font-size: 50px;
+  font-weight: bolder;
+  font-family: bold;
+  margin-bottom: 10px;
+}
+header .header2 h3 {
+  font-size: 22px;
+  font-family: light;
+}
+header .header2 h4 {
+  font-size: 22px;
+  font-family: light;
+}
+header .header2 h5 {
+  font-size: 22px;
+  font-family: light;
+}
+
+.allElems .allFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  justify-content: space-between;
+}
+
+.elem {
+  border-radius: 10px;
+  height: 300px;
+  width: 250px;
+  font-size: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  font-family: normal;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  transition: all ease 0.2;
+}
+
+.elem:hover {
+  scale: 1.03;
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.elem h2 {
+  position: absolute;
+  bottom: 4%;
+  right: 5%;
+}
+
+.elem:active {
+  scale: 0.97;
+}
+
+.fullElems {
+  height: 100%;
+  width: 100%;
+  background-color: var(--sec);
+  padding: 40px;
+  display: none;
+  position: absolute;
+  top: 0;
+  z-index: 99999999;
+  font-family: normal;
+}
+
+.back {
+  position: absolute;
+  right: 5%;
+  background-color: var(--red);
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--pri);
+}
+
+.back:active {
+  scale: 0.95;
+}
+
+.todo-list-fullpage h2 {
+  font-size: 50px;
+}
+
+.todo-list-fullpage .todo-container {
+  width: 100%;
+  height: 80%;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-list-fullpage .todo-container .addtask {
+  width: 33%;
+  background-color: var(--tri2);
+  height: 100%;
+  border-radius: 20px;
+}
+
+.todo-container .addtask form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+.addtask form input#task-input {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  background-color: var(--pri);
+  color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: light;
+  margin-bottom: 20px;
+  font-weight: bolder;
+  text-transform: capitalize;
+}
+
+.addtask form textarea {
+  padding: 15px 25px;
+  width: 100%;
+  font-size: 25px;
+  background-color: var(--pri);
+  color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: light;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.addtask form button {
+  padding: 15px 20px;
+  width: 100%;
+  font-size: 20px;
+  background-color: var(--tri1);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-family: normal;
+  margin-bottom: 20px;
+  transition: all ease 0.2s;
+  font-weight: 500;
+}
+
+.addtask form button:active {
+  scale: 0.95;
+}
+
+.todo-list-fullpage .todo-container .alltask {
+  width: 65%;
+  background-color: var(--tri2);
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  text-transform: capitalize;
+  overflow: auto;
+}
+
+.todo-container .alltask::-webkit-scrollbar {
+  display: none;
+}
+
+.task {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--pri);
+  padding: 15px 30px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  font-family: light;
+  font-weight: bolder;
+  flex-direction: column;
+}
+.task-name {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.task h5 {
+  color: var(--sec);
+  font-size: 25px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.task h5 span {
+  background-color: var(--red);
+  color: var(--pri);
+  font-size: 12px;
+  padding: 4px 6px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: normal;
+}
+
+.task h5 span.true {
+  opacity: 1;
+}
+
+.task h5 span.false {
+  opacity: 0;
+}
+
+.task button {
+  color: var(--pri);
+  background-color: green;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: normal;
+  border: none;
+  transition: all ease 0.2s;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.task button:active {
+  scale: 0.97;
+}
+
+.task {
+  position: relative;
+}
+
+.task-details {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  background-color: var(--tri2);
+  color: var(--pri);
+  margin: 20px auto 0;
+  padding: 20px 25px;
+  border-radius: 20px;
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.6;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.9s ease;
+  font-family: normal;
+}
+
+.task-details[hidden] {
+  display: none;
+}
+
+.mark-imp {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  font-family: bold;
+}
+
+.mark-imp input {
+  scale: 1.5;
+}
+
+.daily-planner-fullpage h2 {
+  font-size: 50px;
+}
+
+.daily-planner-fullpage .day-planner {
+  background-color: var(--tri2);
+  height: 85%;
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.daily-planner-fullpage .day-planner::-webkit-scrollbar {
+  display: none;
+}
+
+.day-planner .day-planner-time {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 5px;
+  width: 49%;
+  margin-bottom: 10px;
+}
+
+.day-planner .day-planner-time p {
+  position: absolute;
+  top: 10%;
+  left: 2%;
+  font-size: 18px;
+  color: darkgray;
+  font-weight: 700;
+}
+
+.day-planner .day-planner-time input {
+  padding: 20px 45px;
+  width: 100%;
+  background-color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  font-size: 30px;
+  padding-top: 35px;
+  outline: none;
+  text-transform: capitalize;
+}
+
+.motivational-fullpage {
+  height: 100%;
+  width: 100%;
+  /* background-color: var(--tri1); */
+}
+
+/* .motivational-fullpage .motivation-container::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: var(--tri1);
+  border-radius: 50px;
+  scale: 1.1;
+  z-index: 8;
+  filter: blur(150px);
+} */
+
+.motivation-container .motivation-wrapper {
+  z-index: 10;
+  position: absolute;
+  width: 80%;
+  background-color: var(--tri1);
+  border-radius: 40px;
+  padding: 17px;
+  border: 5px solid var(--tri2);
+  border-radius: 50px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  position: absolute;
+}
+
+.motivation1 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.motivation1 h2 {
+  background-color: var(--tri2);
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 25px;
+  width: fit-content;
+  font-weight: 500;
+}
+
+.motivation2 {
+  padding: 10px;
+  margin-top: 50px;
+}
+
+.motivation2 h1 {
+  font-size: 40px;
+  color: var(--sec);
+  font-weight: 700;
+}
+
+.motivation3 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
+}
+
+.motivation3 h2 {
+  background-color: var(--tri2);
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 25px;
+  width: fit-content;
+  font-weight: 500;
+  text-align: right;
+}
+
+.motivation-wrapper img {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  height: 80px;
+  opacity: 0.3;
+}
+
+.pomodoro-fullpage h2 {
+  font-size: 50px;
+}
+
+.pomodoro-fullpage .pomo-timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  text-align: center;
+}
+
+.pomo-timer h1 {
+  font-size: 160px;
+}
+
+.pomo-timer button {
+  background-color: var(--tri2);
+  padding: 15px 40px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+  font-size: 20px;
+  box-shadow: 5px 5px 0px black;
+  transition: all ease 0.2s;
+  font-weight: 700;
+}
+
+.pomo-timer button:active {
+  scale: 0.97;
+}
+
+.session {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 15px 30px;
+  background-color: var(--green);
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.daily-goals-fullpage h1 {
+  font-size: 50px;
+}
+
+.weekly-goals {
+  margin-top: 40px;
+  background-color: var(--tri2);
+  height: 80%;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: auto;
+}
+
+.weekly-goals::-webkit-scrollbar {
+  display: none;
+}
+
+.day-goal {
+  width: 48%;
+  background-color: var(--sec);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.day-goal h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  font-family: bold;
+}
+
+.day-goal input {
+  width: 100%;
+  padding: 15px;
+  font-size: 22px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: var(--pri);
+  color: var(--sec);
+  font-family: light;
+  text-transform: capitalize;
+}
+
+@media (max-width: 1350px) {
+  section.allElems {
+    padding: 25px;
+  }
+
+  .allElems header {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 20px;
+  }
+
+  header .header1 h1 {
+    font-size: 44px;
+  }
+  header .header1 h2 {
+    font-size: 30px;
+  }
+  header .header1 h4 {
+    font-size: 34px;
+  }
+
+  .allFeatures {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .elem {
+    width: 45%;
+    height: 260px;
+  }
+
+  /* Todo */
+  .todo-container {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addtask,
+  .alltask {
+    width: 100% !important;
+    height: auto;
+  }
+
+  /* Planner */
+  .day-planner .day-planner-time {
+    width: 100%;
+  }
+
+  /* Weekly goals */
+  .day-goal {
+    width: 100%;
+  }
+
+  .fullElems {
+    height: 110%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 15px;
+  }
+
+  .nav-in {
+    padding: 8px 15px;
+  }
+
+  .nav-in h2 {
+    font-size: 15px;
+  }
+
+  section.allElems {
+    padding: 20px 15px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  header .header1 h1 {
+    font-size: 32px;
+  }
+  header .header1 h2 {
+    font-size: 24px;
+  }
+  header .header1 h4 {
+    font-size: 26px;
+  }
+
+  header .header2 h2 {
+    font-size: 32px;
+  }
+
+  header .header2 h3,
+  header .header2 h4,
+  header .header2 h5 {
+    font-size: 18px;
+  }
+
+  .elem {
+    width: 100%;
+    height: 230px;
+  }
+
+  .elem h2 {
+    font-size: 20px;
+  }
+
+  .fullElems {
+    padding: 20px 15px;
+    height: 110%;
+  }
+
+  .fullElems h1,
+  .fullElems h2 {
+    font-size: 20px;
+  }
+
+  /* Tasks */
+  .task {
+    padding: 12px 18px;
+  }
+
+  .task-name h5 {
+    font-size: 20px;
+  }
+
+  .task button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .task-details {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* Planner input */
+  .day-planner-time input {
+    font-size: 22px;
+    padding: 18px 35px;
+  }
+
+  /* Pomodoro */
+  .pomo-timer h1 {
+    font-size: 90px;
+  }
+
+  .pomo-timer button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .session {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  /* Weekly goals */
+  .weekly-goals {
+    padding: 20px;
+  }
+
+  .day-goal h3 {
+    font-size: 18px;
+  }
+
+  .day-goal input {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .addtask input {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  section.allElems {
+    padding: 25px;
+  }
+
+  .allElems header {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 20px;
+  }
+
+  header .header1 h1 {
+    font-size: 44px;
+  }
+  header .header1 h2 {
+    font-size: 30px;
+  }
+  header .header1 h4 {
+    font-size: 34px;
+  }
+
+  .allFeatures {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .elem {
+    width: 45%;
+    height: 260px;
+  }
+
+  /* Todo */
+  .todo-container {
+    flex-direction: column;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addtask,
+  .alltask {
+    width: 100% !important;
+    height: auto;
+  }
+
+  /* Planner */
+  .day-planner .day-planner-time {
+    width: 100%;
+  }
+
+  /* Weekly goals */
+  .day-goal {
+    width: 100%;
+  }
+
+  .fullElems {
+    height: 110%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 15px;
+  }
+
+  .nav-in {
+    padding: 8px 15px;
+  }
+
+  .nav-in h2 {
+    font-size: 15px;
+  }
+
+  section.allElems {
+    padding: 20px 15px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  header .header1 h1 {
+    font-size: 32px;
+  }
+  header .header1 h2 {
+    font-size: 24px;
+  }
+  header .header1 h4 {
+    font-size: 26px;
+  }
+
+  header .header2 h2 {
+    font-size: 32px;
+  }
+
+  header .header2 h3,
+  header .header2 h4,
+  header .header2 h5 {
+    font-size: 18px;
+  }
+
+  .elem {
+    width: 100%;
+    height: 230px;
+  }
+
+  .elem h2 {
+    font-size: 20px;
+  }
+
+  .fullElems {
+    padding: 20px 15px;
+    height: 110%;
+  }
+
+  .fullElems h1,
+  .fullElems h2 {
+    font-size: 20px;
+  }
+
+  /* Tasks */
+  .task {
+    padding: 12px 18px;
+  }
+
+  .task-name h5 {
+    font-size: 20px;
+  }
+
+  .task button {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .task-details {
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  /* Planner input */
+  .day-planner-time input {
+    font-size: 22px;
+    padding: 18px 35px;
+  }
+
+  /* Pomodoro */
+  .pomo-timer h1 {
+    font-size: 90px;
+  }
+
+  .pomo-timer button {
+    padding: 12px 25px;
+    font-size: 16px;
+  }
+
+  .session {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  /* Weekly goals */
+  .weekly-goals {
+    padding: 20px;
+  }
+
+  .day-goal h3 {
+    font-size: 18px;
+  }
+
+  .day-goal input {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .addtask input {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .header1 h1 {
+    font-size: 26px;
+  }
+
+  header .header1 h2 {
+    font-size: 20px;
+  }
+
+  .fullElems h1,
+  .fullElems h2 {
+    font-size: 20px;
+  }
+
+  .addtask input {
+    padding: 5px 10px;
+  }
+
+  .task-name {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .task button {
+    align-self: flex-start;
+  }
+
+  .pomo-timer h1 {
+    font-size: 100px;
+  }
+
+  .back {
+    font-size: 14px;
+    padding: 8px 12px;
+    top: 2%;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    gap: 20px;
+  }
+
+  .addtask {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .addtask form {
+    width: 100%;
+  }
+
+  .addtask input,
+  .addtask textarea,
+  .addtask button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .addtask textarea {
+    height: 130px;
+    resize: none;
+  }
+
+  .mark-imp {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .alltask {
+    width: 100%;
+    max-width: 100%;
+    min-height: 200px;
+    padding: 15px;
+  }
+
+  .task {
+    width: 100%;
+  }
+
+  .motivation-wrapper img {
+    display: none;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .addtask {
+    padding: 1px;
+  }
+
+  .addtask textarea {
+    height: 110px;
+  }
+
+  .task-name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .task button {
+    width: auto;
+  }
+}
+
+
+@media (max-width: 780px) {
+  
+  .addtask {
+    padding: 14px !important;
+  }
+
+  .alltask {
+    padding: 14px !important;
+  }
+
+  /* Mark as Important alignment */
+  .mark-imp {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2px;
+    margin: 7px 2px;
+  }
+
+  .mark-imp input {
+    transform: scale(1.2);
+    /* margin: 0; */
+  }
+
+  .mark-imp label,
+  .mark-imp span {
+    font-size: 16px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .addtask {
+    padding: 2px !important;
+  }
+
+  .alltask {
+    padding: 18px !important;
+  }
+
+  .mark-imp {
+    gap: 4px;
+  }
+
+  .mark-imp input {
+    transform: scale(1.1);
+  }
+
+  .mark-imp label,
+  .mark-imp span {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 780px) {
+  .mark-imp {
+    gap: 6px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .mark-imp {
+    gap: 5px; 
+  }
+
+  .motivation-wrapper img {
+    display: none;
+  }
+
+  .motivation-container {
+    width: 100%;
+    height: 100%;
+    padding: 5px 20px;
+  }
+}
