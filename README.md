@@ -52,7 +52,7 @@ https://prodashboardd.netlify.app/
 ⚙️ How to Run Locally
 
 1. Clone the repository
-   git clone https://github.com/your-username/productivity-dashboard.git
+   git clone https://github.com/Roshaan-svg/Productivity-Dashboard.git
 2. Open the project folder
 3. Run "index.html" in your browser
 
