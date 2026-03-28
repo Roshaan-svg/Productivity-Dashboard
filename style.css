@@ -38,7 +38,7 @@ body {
 }
 
 #main {
-  height: 110%;
+  height: 120%;
   width: 100%;
   background-color: var(--sec);
   padding-top: 70px;
@@ -193,7 +193,7 @@ header .header2 h5 {
 }
 
 .fullElems {
-  height: 100%;
+  height: 120%;
   width: 100%;
   background-color: var(--sec);
   padding: 40px;
@@ -465,7 +465,7 @@ header .header2 h5 {
 }
 
 .motivational-fullpage {
-  height: 100%;
+  height: 120%;
   width: 100%;
   /* background-color: var(--tri1); */
 }
